@@ -25,6 +25,7 @@ function switchToLogin() {
     $("#login").show()
 }
 
+
 function switchToLanding() {
     $("#login").hide()
     $("#home").hide()
