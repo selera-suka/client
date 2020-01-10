@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');
 .carousel-item {
   height: 100vh;
   min-height: 350px;
@@ -21,4 +22,44 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+}
+
+#nav-bar{
+    height: 5rem;
+}
+
+.navbar-brand{
+    font-family: 'Francois One', sans-serif;
+    font-size: 2rem;
+}
+
+.carousel-item-detail{
+    height: 400px;
+    width: 100%;
+}
+
+.p-5 {
+    padding: 3rem!important;
+    padding-bottom: 1rem !important;
+}
+
+.caro-detail{
+    max-height: calc(100vh);
+}
+
+mark{
+    background-color:green !important;
+    color: white !important;
+}
+
+#weather {
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.02);
+  border: none !important;
+  align-items: center
+}
+
+#weather-img {
+  height: 150px;
+  width: 150px;
 }
