@@ -1,3 +1,5 @@
+let origin = '-6.260779,106.781646'
+
 function getRestaurantDetail(id) {
   $.ajax({
     method: 'GET',
@@ -64,14 +66,11 @@ function getRestaurantDetail(id) {
 
       $('#maps').empty()
       $('#maps').append(`
-        <img class="w-100"
-        src="https://img.okezone.com/content/2020/01/03/207/2148855/google-maps-beri-tanda-penutupan-jalan-akibat-banjir-di-jakarta-6fLvlO4x2Y.jpg"
-        class="d-block caro-detail" alt="gambar" style="vertical-align: middle"/>
+        <div id="gmaps" class="d-flex"></div>
       `)
 
       const destination = `${restaurant.location.latitude},${restaurant.location.longitude}`
-      console.log(destination)
       //weather(restaurant.location.latitude, restaurant.location.longitude)
-      //maps(geolocation, destination)
+      fetchRoutes(origin, destination)
     })
 }

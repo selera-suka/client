@@ -1,9 +1,6 @@
-let origin = '-6.260779,106.781646'
-let destination = '-6.172232,106.827827'
 
 $(document).ready(function(){
-  fetchRoutes(origin, destination)
-  getRestaurantDetail(18560821)
+  getRestaurantDetail(18569489)
 })
 function switchToHome(){
     $("#login").hide()

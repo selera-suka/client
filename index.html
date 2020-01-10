@@ -100,37 +100,19 @@
 
   <!-- DETAIL PAGE -->
   <div id="detail">
-
-    <div id="gmaps" class="d-flex">
-      <div class="position-relative">
-        <iframe
-          width="600" 
-          height="450"
-          frameborder="0"
-          style="border:0"
-          src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJY2A1SKbxaS4Rya5Gq8faFHA&destination=place_id:ChIJN96OAajxaS4R6pvO_Fwv0dc&key=AIzaSyAwXrppLmik5mFCJqSV8ttiBN0L-2tOw0E" allowfullscreen>
-        </iframe>
-      </div>
-
-      <div id="routes" class="list-group overflow-auto"style="max-height: 450px;">
-        
-      </div>
+  <!-- WEATHER -->
+      <div class="container-fluid w-25">
+        <div class="row vertical-center">
+            <div class="col p-4 border rounded" style="background-color: rgb(85, 211, 68); text-align: center;">
+                <a href="#" onclick="signOut();">Sign out</a>
+                <h3>Weather:</h3>
+                <br>
+                <div id="weather"></div>
+            </div>
+        </div>
     </div>
-
-<!-- WEATHER -->
-    <div class="container-fluid w-25">
-      <div class="row vertical-center">
-          <div class="col p-4 border rounded" style="background-color: rgb(85, 211, 68); text-align: center;">
-              <a href="#" onclick="signOut();">Sign out</a>
-              <h3>Weather:</h3>
-              <br>
-              <div id="weather"></div>
-          </div>
-      </div>
+    <!-- WEATHER END -->
   </div>
-
-  <!-- WEATHER END -->
-
   <div id="main-page">
     <!-- NAVBAR -->
     <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
@@ -153,7 +135,7 @@
               <!-- Carousel -->
               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                  <div class="carousel-item active" id="head-image">
+                  <div class="carousel-item carousel-item-detail active" id="head-image">
                     <!-- append image -->
                   </div>
                 </div>
@@ -211,7 +193,6 @@
                     </ul>
                   </div>
                 </div>
-      
               </div>
             </div>
           </div>
@@ -222,12 +203,8 @@
         <div id="detail-information-body">
           <div class="d-flex p-5" id="detail-body">
             <div class="card w-100">
-              <div class="d-flex bd-highlight">
-                <div class="p-2 flex-fill bg-highlight">
-                  <div class="container mt-3 mb-3" id="maps">
+              <div class="d-flex bd-highlight" id="maps">
                     <!-- append maps here -->
-                  </div>
-                </div>      
               </div>
             </div>
           </div>
