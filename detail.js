@@ -50,11 +50,9 @@ function getRestaurantDetail(id) {
         `)
       })
 
-      $('#weather').empty()
-      $('#weather').append(`
-        <div>
-          <h1>as</h1>
-        </div>
+      $('#weather2').empty()
+      $('#weather2').append(`
+        <div id='weather' class='card mt-4'></div>
       `)
 
       $('#head-image').empty()
@@ -70,7 +68,7 @@ function getRestaurantDetail(id) {
       `)
 
       const destination = `${restaurant.location.latitude},${restaurant.location.longitude}`
-      //weather(restaurant.location.latitude, restaurant.location.longitude)
+      weather(restaurant.location.latitude, restaurant.location.longitude)
       fetchRoutes(origin, destination)
     })
 }
