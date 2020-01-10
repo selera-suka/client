@@ -25,7 +25,10 @@ function switchToLogin() {
     $("#login").show()
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 123dc8f95b59bbdf423bb5de3ec6a75509b9875f
 function switchToLanding() {
     $("#login").hide()
     $("#home").hide()
