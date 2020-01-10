@@ -7,3 +7,18 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
+.vertical-center{
+    min-height: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+  }
+
+#login {
+    background-image: url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
