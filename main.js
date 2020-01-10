@@ -3,6 +3,7 @@ let destination = '-6.172232,106.827827'
 
 $(document).ready(function(){
   fetchRoutes(origin, destination)
+  getRestaurantDetail(18560821)
 })
 function switchToHome(){
     $("#login").hide()
@@ -25,10 +26,6 @@ function switchToLogin() {
     $("#login").show()
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 123dc8f95b59bbdf423bb5de3ec6a75509b9875f
 function switchToLanding() {
     $("#login").hide()
     $("#home").hide()
