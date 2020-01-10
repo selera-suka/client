@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-signin-client_id" content="9810217111-ecm8agpu11mluugutqkabh5ln93phfle.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -77,6 +78,15 @@
   <!-- END OF LANDING PAGE -->
 
   <!-- LOGIN PAGE  -->
+  <div>
+      <div class="flexbox">
+          <div class="search">
+            <h3>Click on search icon, then type restaurant name.</h3>
+            <div>
+              <input type="text" placeholder="       Search . . ." required>
+            </div>
+          </div>
+        </div>
   <div id="login" style="display: block;">
     <!-- isi disini yak codenya -->
     <div class="container-fluid w-25">
@@ -92,11 +102,14 @@
   </div>
   <!-- END LOGIN PAGE  -->
 
+
   <!-- HOME PAGE -->
-  <div id="home" style="display: none;">
-    <!-- isi disini yak codenya -->
-  </div>
+    <div class="container">
+      <div class="row" id="restaurants-container"></div>
+    </div>
+
   <!-- END HOME PAGE -->
+
 
   <!-- DETAIL PAGE -->
   <div id="main-page">
@@ -212,12 +225,12 @@
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="gmaps.js"></script>
   <script src="weather.js"></script>
   <script src="detail.js"></script>
   <script src="main.js"></script>
   <script src="signin.js"></script>
-  
 </body>
 </html>
