@@ -4,13 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="9810217111-ecm8agpu11mluugutqkabh5ln93phfle.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  <title>Selera Suka</title>
+  <link type="text/css" rel="stylesheet" href="./style.css">
+    <title>Selera Suka</title>
 </head>
 <body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Selera Suka</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- LANDING PAGE -->
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/5X8oLkzZ1fI/1920x1080')">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4 text-dark"></h2>
+            <p class="lead text-dark">This is a description for the first slide.</p>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/C1Q3qOTlegg/1920x1080')">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4 text-dark">Second Slide</h2>
+            <p class="lead text-dark">This is a description for the second slide.</p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/Z5tSnuGuTTw/1920x1080');">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4">Third Slide</h2>
+            <p class="lead">This is a description for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+    </div>
+  </header>
+  <!-- END OF LANDING PAGE -->
 
   <!-- LOGIN PAGE  -->
   <div>
@@ -22,6 +87,18 @@
             </div>
           </div>
         </div>
+  <div id="login" style="display: block;">
+    <!-- isi disini yak codenya -->
+    <div class="container-fluid w-25">
+        <div class="row vertical-center">
+            <div class="col p-4 shadow rounded bg-light" style="text-align: center;">
+                <h3>Login with Google:</h3>
+                <br>
+                <div class="g-signin2" data-width="280"  data-longtitle="true" data-onsuccess="onSignIn"></div>
+                <br>
+            </div>
+        </div>
+    </div>
   </div>
   <!-- END LOGIN PAGE  -->
 
@@ -30,12 +107,114 @@
     <div class="container">
       <div class="row" id="restaurants-container"></div>
     </div>
+
   <!-- END HOME PAGE -->
 
 
   <!-- DETAIL PAGE -->
-  <div>
-    <!-- isi disini yak codenya -->
+  <div id="main-page">
+    <!-- NAVBAR -->
+    <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
+      <div onclick="backHome()" id="back-home">
+        <a class="navbar-brand"><i class="fas fa-utensils mr-3"></i>Selera SukaSuka</a>
+      </div>
+      <div>
+        <button class="btn btn-outline-primary" onclick="signOut()">Signout</button>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <div>
+      <!-- DETAIL INFORMATION -->
+      <div id="detailCard">
+        <!-- Detail Head -->
+        <div id="detail-information-head">
+          <div class="d-flex p-5">
+            <div class="card w-100">
+              <!-- Carousel -->
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item carousel-item-detail active" id="head-image">
+                    <!-- append image -->
+                  </div>
+                </div>
+              </div>
+              <!-- Carousel End -->
+      
+              <!-- Title -->
+              <div class="container mt-4 mb-3 ml-2">
+                <div id="title">
+                  <div class="row">
+                    <div class="col" id="detail-one-card">
+                      <!-- Append detail here -->
+                    </div>
+                    <div class="col" style="text-align: right" id="rating-one-card">
+                      <!-- Append rating here -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Title End -->
+          </div>
+        </div>
+      
+        <!-- Detail Head End -->
+      
+        <!-- Detail Body -->
+        <div id="detail-information-body">
+          <div class="d-flex p-5" id="detail-body">
+            <div class="card w-100">
+              <div class="d-flex bd-highlight">
+                <div class="p-2 flex-fill bg-highlight">
+                  <div class="container mt-3" id="number-resto">
+                    <!-- append number here -->
+                  </div>
+                </div>
+      
+                <div class="p-2 flex-fill bg-highlight">
+                  <div class="container mt-3" id="resto-time">
+                    <!-- append time here -->
+                  </div>
+                  <div class="container mt-3">
+                    <h4 class="mt-4">Detail Information</h4>
+                    <ul id="list-highlight">
+                      <!-- append -->
+                    </ul>
+                  </div>
+                </div>
+      
+                <div class="p-2 flex-fill bg-highlight">
+                  <div class="container mt-3">
+                    <h4>Weather</h4>
+                    <ul id="weather2">
+                      <!-- append -->
+                    </ul>
+                  </div>
+                  <div class="container mt-4">
+                    <h4>Tag</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Detail Body End -->
+
+        <!-- Maps -->
+        <div id="detail-information-body">
+          <div class="d-flex p-5" id="detail-body">
+            <div class="card w-100">
+              <div class="d-flex bd-highlight" id="maps">
+                    <!-- append maps here -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Maps End -->
+      </div>
+      <!-- END DETAIL INFORMATION -->
+    </div>
   </div>
   <!-- END DETAIL PAGE -->
 
@@ -46,6 +225,12 @@
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="gmaps.js"></script>
+  <script src="weather.js"></script>
+  <script src="detail.js"></script>
   <script src="main.js"></script>
+  <script src="signin.js"></script>
 </body>
 </html>
